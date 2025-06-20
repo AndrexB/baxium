@@ -355,6 +355,7 @@ void TestHKDF_SHA256_32(const std::string &ikm_hex, const std::string &salt_hex,
 }
 
 void TestSHA3_256(const std::string& input, const std::string& output);
+void TestSHA3_512(const std::string& input, const std::string& output);
 }; // struct CryptoTests
 } // namespace crypto_tests
 
