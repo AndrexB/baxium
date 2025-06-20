@@ -18,7 +18,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind/bitcoind.pid \
+ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind/baxiumd.pid \
                             -conf=/etc/bitcoin/bitcoin.conf \
                             -datadir=/var/lib/bitcoind \
                             -startupnotify='systemd-notify --ready' \
@@ -33,7 +33,7 @@ ExecStartPre=/bin/chgrp bitcoin /etc/bitcoin
 
 Type=notify
 NotifyAccess=all
-PIDFile=/run/bitcoind/bitcoind.pid
+PIDFile=/run/bitcoind/baxiumd.pid
 
 Restart=on-failure
 TimeoutStartSec=infinity
