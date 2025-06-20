@@ -11,10 +11,10 @@ When using a hardware wallet, consult the manufacturer website for (alternative)
 Start Bitcoin Core:
 
 ```sh
-$ bitcoind -signer=../HWI/hwi.py
+$ baxiumd -signer=../HWI/hwi.py
 ```
 
-`bitcoin node` can also be substituted for `bitcoind`.
+`bitcoin node` can also be substituted for `baxiumd`.
 
 ### Device setup
 
