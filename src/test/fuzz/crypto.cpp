@@ -36,6 +36,7 @@ FUZZ_TARGET(crypto)
     CSHA256 sha256;
     CSHA512 sha512;
     SHA3_256 sha3;
+    SHA3_512 sha3_512;
     CSipHasher sip_hasher{fuzzed_data_provider.ConsumeIntegral<uint64_t>(), fuzzed_data_provider.ConsumeIntegral<uint64_t>()};
 
     LIMITED_WHILE(fuzzed_data_provider.ConsumeBool(), 30)
@@ -60,6 +61,7 @@ FUZZ_TARGET(crypto)
                 (void)sha1.Write(data.data(), data.size());
                 (void)sha256.Write(data.data(), data.size());
                 (void)sha3.Write(data);
+                (void)sha3_512.Write(data);
                 (void)sha512.Write(data.data(), data.size());
                 (void)sip_hasher.Write(data);
 
@@ -74,6 +76,7 @@ FUZZ_TARGET(crypto)
                 (void)sha1.Reset();
                 (void)sha256.Reset();
                 (void)sha3.Reset();
+                (void)sha3_512.Reset();
                 (void)sha512.Reset();
             },
             [&] {
@@ -118,6 +121,10 @@ FUZZ_TARGET(crypto)
                     [&] {
                         data.resize(SHA3_256::OUTPUT_SIZE);
                         sha3.Finalize(data);
+                    },
+                    [&] {
+                        data.resize(SHA3_512::OUTPUT_SIZE);
+                        sha3_512.Finalize(data);
                     });
             });
     }
