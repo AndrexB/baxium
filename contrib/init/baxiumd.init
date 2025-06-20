@@ -19,14 +19,14 @@ fi
 RETVAL=0
 
 prog=baxiumd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/baxiumd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/baxiumd}
+# you can override the lockfile via BAXIUMD_LOCKFILE in /etc/sysconfig/baxiumd
+lockfile=${BAXIUMD_LOCKFILE-/var/lock/subsys/baxiumd}
 
-# baxiumd defaults to /usr/bin/baxiumd, override with BITCOIND_BIN
-baxiumd=${BITCOIND_BIN-/usr/bin/baxiumd}
+# baxiumd defaults to /usr/bin/baxiumd, override with BAXIUMD_BIN
+baxiumd=${BAXIUMD_BIN-/usr/bin/baxiumd}
 
-# baxiumd opts default to -disablewallet, override with BITCOIND_OPTS
-baxiumd_opts=${BITCOIND_OPTS--disablewallet}
+# baxiumd opts default to -disablewallet, override with BAXIUMD_OPTS
+baxiumd_opts=${BAXIUMD_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
