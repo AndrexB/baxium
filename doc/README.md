@@ -16,7 +16,7 @@ The following are some helpful notes on how to run Bitcoin Core on your native p
 Unpack the files into a directory and run:
 
 - `bin/bitcoin-qt` (GUI) or
-- `bin/bitcoind` (headless)
+- `bin/baxiumd` (headless)
 - `bin/bitcoin` (wrapper command)
 
 The `bitcoin` command supports subcommands like `bitcoin gui`, `bitcoin node`, and `bitcoin rpc` exposing different functionality. Subcommands can be listed with `bitcoin help`.

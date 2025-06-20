@@ -1,0 +1,33 @@
+# /etc/conf.d/baxiumd: config file for /etc/init.d/baxiumd
+
+# Config file location
+#BAXIUMD_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BAXIUMD_USER)
+#BAXIUMD_PIDDIR="/var/run/baxiumd"
+
+# What filename to give the pidfile
+#BAXIUMD_PIDFILE="${BAXIUMD_PIDDIR}/baxiumd.pid"
+
+# Where to write baxiumd data (be mindful that the blockchain is large)
+#BAXIUMD_DATADIR="/var/lib/baxiumd"
+
+# User and group to own baxiumd process
+#BAXIUMD_USER="bitcoin"
+#BAXIUMD_GROUP="bitcoin"
+
+# Path to baxiumd executable
+#BAXIUMD_BIN="/usr/bin/baxiumd"
+
+# Nice value to run baxiumd under
+#BAXIUMD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BAXIUMD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for baxiumd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BAXIUMD_SIGTERM_TIMEOUT=600
