@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CRYPTO_MUHASH_H
-#define BITCOIN_CRYPTO_MUHASH_H
+#ifndef BAXIUM_CRYPTO_MUHASH_H
+#define BAXIUM_CRYPTO_MUHASH_H
 
 #include <serialize.h>
 #include <uint256.h>
@@ -133,4 +133,4 @@ public:
     }
 };
 
-#endif // BITCOIN_CRYPTO_MUHASH_H
+#endif // BAXIUM_CRYPTO_MUHASH_H
