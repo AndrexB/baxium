@@ -18,8 +18,8 @@ BAXIUMD_BIN=${BAXIUMD_BIN:-/usr/bin/baxiumd}
 BAXIUMD_NICE=${BAXIUMD_NICE:-${NICELEVEL:-0}}
 BAXIUMD_OPTS="${BAXIUMD_OPTS:-${BITCOIN_OPTS}}"
 
-name="Bitcoin Core Daemon"
-description="Bitcoin cryptocurrency P2P network daemon"
+name="Baxium Daemon"
+description="Baxium network daemon"
 
 command="/usr/bin/baxiumd"
 command_args="-pid=\"${BAXIUMD_PIDFILE}\" \
@@ -85,7 +85,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"Bitcoin Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"Baxium Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1
